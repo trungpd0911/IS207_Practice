@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1</title>
+    <link rel="stylesheet" href="./access/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#introduce">Giới thiệu bản thân</a>
+        <a href="#giao-luu">Giao lưu</a>
+    </nav>
+
+    <div class="introduce-yourself" id="introduce">
+        <h1>Giới thiệu bản thân</h1>
+        <div class="avatar">
+            <img src="./access/img/a7.webp" alt="trung phan" style="width: 300px; margin: 0 calc(50% - 150px);">
+        </div>
+        <h2>Thông tin cơ bản</h2>
+        <ul>
+            <li>Tên: Trung Phan</li>
+            <li>Năm sinh: 2003</li>
+            <li>chuyên ngành: Công nghệ thông tin</li>
+        </ul>
+        <h2>Sở thích</h2>
+        <h3>Món ăn</h3>
+        <ol>
+            <li>Bánh mì</li>
+            <li>Bún đậu</li>
+            <li>Mì tôm</li>
+        </ol>
+        <h3>Giải trí</h3>
+        <h4>Trò chơi</h4>
+        <ul>
+            <li>Bóng đá</li>
+            <li>Valorant</li>
+            <li>Teamfight tastic</li>
+        </ul>
+        <h4>Bài nhạc yêu thích</h4>
+        <ul>
+            <li>mười năm_Đen Vâu</li>
+            <li>Glory Glory Man United_Mân</li>
+            <li>Sống cho hết đời thanh xuân_BCTM</li>
+        </ul>
+
+        <!-- target -->
+        <h2>Mục tiêu của bản thân</h2>
+        <table>
+            <tr>
+                <th>Mục tiêu</th>
+                <th>Thời hạn</th>
+                <th>Hoàn thành</th>
+            </tr>
+            <tr>
+                <td>Trung bình điểm đạt trên 8</td>
+                <td>DD/MM/YYYY</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr>
+                <td>Đạt chứng chỉ ngoại ngữ chuẩn tốt nghiệp</td>
+                <td>DD/MM/YYYY</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Chọn được công ty với vị trí Backend dev</td>
+                <td>DD/MM/YYYY</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+        <br>
+    </div>
+
+    <div class="send-info" id="giao-luu">
+        <h1>Gửi thông tin và giao lưu cùng tôi</h1>
+        <form action="#">
+            <label for="name">Họ và tên:</label>
+            <input type="text"> <br> <br>
+            <label for="Email">Email: </label>
+            <input type="text"> <br> <br>
+
+            <label for="Msg">Tin nhắn: </label> <br>
+            <textarea name="msg" id="" cols="50" rows="8"></textarea> <br> <br>
+
+            <label for="sex">Giới tính: </label> <br>
+            <input type="radio" name="sex" value="nam"> Nam
+            <input type="radio" name="sex" value="nữ"> Nữ
+
+            <br> <br>
+
+            <label for="Hobby">Sở thích: </label> <br>
+            <input type="checkbox" name="hobby" value="nghe nhạc"> Nghe nhạc
+            <input type="checkbox" name="hobby" value="Đá banh"> Đá banh
+            <input type="checkbox" name="hobby" value="Bóng bàn"> Bóng bàn
+
+            <br> <br>
+
+            <label for="major">Ngành: </label>
+            <select name="major" id="major">
+                <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                <option value="Khoa học máy tính">Khoa học máy tính</option>
+                <option value="hệ thống thông tin">hệ thống thông tin</option>
+                <option value="khoa học dữ liệu">khoa học dữ liệu</option>
+                <option value="an ninh thông tin">an ninh thông tin</option>
+            </select>
+
+            <br><br>
+            <button type="button">Gửi</button>
+            <br> <br>
+        </form>
+    </div>
+
+    <footer>
+        <p>@2023 21520504 Phan Đình Thế Trung</p>
+    </footer>
+</body>
+
+</html>

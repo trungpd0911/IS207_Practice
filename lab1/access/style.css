@@ -1,0 +1,79 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: #CAEDFF;
+    margin-top: 0;
+}
+
+h2{
+    color:  #D8B4F8;
+}
+
+h3{
+    color: #FFC7EA;
+}
+
+h4{
+    color: #e4dba2;
+}
+
+h1,h2,h3,h4{
+    font-size: 24px;
+    /* text-decoration-line:initial; */
+    /* text-decoration-color: black; */
+    text-shadow: 1px 1px 0 black,
+    -1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black;
+}
+
+nav{
+    background-color: #d4f2f4;
+    color:  #0b0848;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.introduce-yourself{
+    background-color:  #F3FDE8;
+    padding-left: 16px;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+.send-info{
+    background-image:url("https://c4.wallpaperflare.com/wallpaper/733/860/1021/chill-out-clouds-landscape-mountains-wallpaper-preview.jpg");
+    background-size: 50%;
+    background-repeat: repeat;
+    text-align: center;
+}
+
+footer{
+    background-color: #d4f2f4;
+    color:  #0b0848;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: 600;
+}

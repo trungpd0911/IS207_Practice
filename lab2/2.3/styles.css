@@ -1,0 +1,181 @@
+*,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+
+nav,
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    display: flex;
+}
+
+nav p,
+footer p {
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+.main {
+    background-color: #f0eff0;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-level-B {
+    display: none;
+}
+
+#main-level-A {
+    display: none;
+}
+
+/* #main-level-C {
+    display: none;
+} */
+
+.alarm {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarm__button {
+    height: 60px;
+    width: 60px;
+    background-color: #50504f;
+    border-radius: 50%;
+}
+
+#button-A {
+    background-color: red;
+    box-shadow: 0 0 40px rgba(255, 102, 0, 0.8);
+}
+
+#button-B {
+    background-color: orange;
+    box-shadow: 0 0 40px rgba(255, 102, 0, 0.8);
+}
+
+.alarm__button:hover {
+    background-color: rgb(252, 161, 0);
+    box-shadow: 0 0 40px rgba(255, 102, 0, 0.8);
+}
+
+.alarm__button-text {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.alarm__info {
+    flex: 1;
+    margin: 20px;
+    border-radius: 2px;
+    background-color: #fdfefe;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.alarm__text {
+    font-size: 2rem;
+    text-align: left;
+    padding: 24px;
+    font-weight: 400;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.alarm__text h2 {
+    margin-bottom: 20px;
+}
+
+
+.alarm__text-list {
+    padding-left: 30px;
+    line-height: 30px;
+}
+
+#text-lvA {
+    background-color: #feb9a2;
+}
+
+#text-lvB {
+    background-color: #fee5a0;
+}
+
+
+.form {
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    flex: 1;
+    padding: 40px;
+    font-size: 2rem;
+    line-height: 26px;
+}
+
+.form h2 {
+    margin: 20px 0;
+}
+
+.evacuation-Form__box {
+    background-color: #f7f7f7;
+    padding: 20px;
+    width: 50%;
+    min-width: 400px;
+}
+
+.evacuation-Form__box input {
+    width: 30%;
+    min-width: 200px;
+    padding: 4px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.evacuation-Form__box select {
+    padding: 4px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.evacuation-Form__box button {
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #d91800;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+/* padding: 0 10px; */
+td,
+th {
+    padding: 0 10px;
+}

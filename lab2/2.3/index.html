@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chua chay</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <nav>
+            <p>PHÒNG CHÁY CHỮA CHÁY</p>
+        </nav>
+
+
+        <section class="main" id="main-level-C">
+            <div class="alarm">
+                <div class="alarm__button" id="button-C"></div>
+                <div class="alarm__button-text"></div>
+            </div>
+
+            <div class="alarm__info">
+                <div class="alarm__text" id="text-lvC">
+                    <h2>hãy luôn cảnh giác và phòng cháy đúng cách!!!</h2>
+                    <ol class="alarm__text-list">
+                        <li>Tiến hành kiểm tra định kỳ và bảo dưỡng hệ thống báo cháy, bộ
+                            chữa cháy và thiết bị an toàn trong tòa nhà.
+                        </li>
+                        <li>Xây dựng và thực hiện kế hoạch đào tạo cho nhân viên và cư dân về
+                            an toàn cháy nổ.
+                        </li>
+                        <li>Tuân thủ các quy tắc về việc sử dụng các thiết bị điện tử, nước, và
+                            nguồn nhiệt trong tòa nhà để tránh nguy cơ cháy.
+                        </li>
+                        <li>Xác định và giám sát các khu vực có nguy cơ cao và đảm bảo tuân
+                            thủ các quy tắc về sử dụng và lưu trữ chất dễ cháy và nổ.
+                        </li>
+                        <li>Tạo ra một môi trường sống và làm việc an toàn bằng cách thực hiện
+                            các biện pháp an ninh và an toàn, chẳng hạn như cài đặt thiết bị bảo
+                            vệ phù hợp và bảo vệ các thông tin quan trọng.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="main" id="main-level-B">
+            <div class="alarm">
+                <div class="alarm__button" id="button-B"></div>
+                <div class="alarm__button-text">ALARM LEVEL B GOES ON!</div>
+            </div>
+
+            <div class="alarm__info">
+                <div class="alarm__text" id="text-lvB">
+                    <h2>Cảnh Báo Đã Phát Hiện Đám Cháy Nhỏ!!!</h2>
+                    <ol class="alarm__text-list">
+                        <li>Thông báo cho nhân viên hoặc cư dân trong tòa nhà về cảnh báo
+                            bằng cách kích hoạt báo cháy hoặc cảnh báo tương tự.
+                        </li>
+                        <li>Liên hệ với cơ quan cứu hỏa hoặc dịch vụ chữa cháy để báo cáo
+                            tình hình và xác minh.
+                        </li>
+                        <li>Theo dõi tình hình để đảm bảo an toàn và sẵn sàng thực hiện các
+                            hành động tiếp theo nếu cần.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- khi co chay -->
+        <section class="main" id="main-level-A">
+            <div class="alarm">
+                <div class="alarm__button" id="button-A"></div>
+                <div class="alarm__button-text">ALARM LEVEL A GOES ON!</div>
+            </div>
+
+            <div class="alarm__info">
+                <div class="alarm__text" id="text-lvA">
+                    <h2>Nguy Hiểm!!! Đã Phát Hiện Đám Cháy Lớn!!!</h2>
+                    <ol class="alarm__text-list">
+                        <li>Kích hoạt báo cháy và báo động cho tất cả mọi người trong tòa nhà
+                            bằng cách sử dụng hệ thống báo cháy hoặc thiết bị tương tự.
+                        </li>
+                        <li>Gọi cứu hỏa bằng số điện thoại 114 hoặc số điện thoại cứu hỏa địa
+                            phương.
+                        </li>
+                        <li>Thực hiện kế hoạch sơ tán hoặc lưu trú an toàn nếu cần thiết và tuân
+                            thủ hướng dẫn của cơ quan cứu hỏa.
+                        </li>
+                    </ol>
+                </div>
+                <div class="form">
+                    <div class="evacuation-Form">
+                        <h2>Form Cứu Hộ</h2>
+                        <div class="evacuation-Form__box">
+                            <label for="name">Chủ hộ: </label> <br>
+                            <input type="text"> <br>
+                            <label for="Email">Tòa: </label> <br>
+                            <input type="text"> <br>
+                            <label for="Email">Phòng: </label> <br>
+                            <input type="text"> <br>
+                            <label for="Email">Có trẻ con: </label> <br>
+                            <select name="have-child">
+                                <option value="có">có</option>
+                                <option value="không">không</option>
+                            </select>
+                            <br>
+                            <label for="Email">Có người già: </label> <br>
+                            <select name="have-old-people">
+                                <option value="có">có</option>
+                                <option value="không">không</option>
+                            </select>
+                            <br>
+                            <button type="button">Submit</button>
+                        </div>
+                    </div>
+                    <!-- dont evacuation -->
+                    <div class="unaidedPersonList">
+                        <h2>Chưa sơ tán</h2>
+                        <table>
+                            <colgroup>
+                                <col style="width: 250px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Chủ hộ</th>
+                                    <th>Tòa</th>
+                                    <th>Phòng</th>
+                                    <th>Có trẻ con</th>
+                                    <th>Có người già</th>
+                                    <th>Đã sơ tán</th>
+                                </tr>
+                            </thead>
+                            <tbody id="unaided-list">
+                                <tr>
+                                    <td>Phan Đình Thế Trung</td>
+                                    <td>A1</td>
+                                    <td>101</td>
+                                    <td>có</td>
+                                    <td>không</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Hồ Nhật Huy</td>
+                                    <td>A2</td>
+                                    <td>101</td>
+                                    <td>có</td>
+                                    <td>có</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Trần Đình Khánh</td>
+                                    <td>A2</td>
+                                    <td>101</td>
+                                    <td>có</td>
+                                    <td>có</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="aidedPersonList">
+                        <h2>Đã sơ tán</h2>
+                        <table>
+                            <colgroup>
+                                <col style="width: 250px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Chủ hộ</th>
+                                    <th>Tòa</th>
+                                    <th>Phòng</th>
+                                    <th>Có trẻ con</th>
+                                    <th>Có người già</th>
+                                    <th>Đã sơ tán</th>
+                                </tr>
+                            </thead>
+                            <tbody id="aided-list">
+                                <tr>
+                                    <td>Phạm mạnh Tấn</td>
+                                    <td>A4</td>
+                                    <td>301</td>
+                                    <td>có</td>
+                                    <td>không</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>Phan Thanh Dương</td>
+                                    <td>A2</td>
+                                    <td>101</td>
+                                    <td>có</td>
+                                    <td>có</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <p>@ 2023 Phan Đình Thế Trung - 21520504</p>
+        </footer>
+
+    </div>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
