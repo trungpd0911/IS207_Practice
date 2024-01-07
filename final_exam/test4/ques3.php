@@ -55,28 +55,50 @@
     </div>
     <script>
         const getBill = () => {
+            let tbody = document.querySelector('tbody');
+            tbody.innerHTML = '';
             const xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = () => {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    const data = JSON.parse(xhttp.responseText);
-                    const tbody = document.querySelector('tbody');
-                    tbody.innerHTML = '';
-                    data.forEach((item, index) => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${index + 1}</td>
-                            <td>${item.madh}</td>
-                            <td>${item.tenkh}</td>
-                            <td>
-                                <a href="ques4.php?madh=${item.madh}" class="btn btn-primary">Chi tiết</a>
-                            </td>
+                    const res = JSON.parse(xhttp.responseText);
+                    res.forEach((item, index) => {
+                        let html = `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${item.madh}</td>
+                                <td>${item.tendh}</td>
+                                <td>
+                                    <button class="btn btn-danger" onclick="deleteBill('${item.madh}')">Xóa</button>
+                                </td>
+                            </tr>
                         `;
-                        tbody.appendChild(tr);
+                        tbody.innerHTML += html;
                     });
                 }
             }
             xhttp.open('GET', 'controller.php?action=getBill', true);
             xhttp.send();
+        }
+        const deleteBill = (id) => {
+            if (confirm('Bạn có chắc chắn muốn xóa đơn hàng này không?')) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = () => {
+                    if (xhttp.readyState == 4 && xhttp.status == 200) {
+                        const res = JSON.parse(xhttp.responseText);
+                        if (res.status == 200) {
+                            getBill();
+                        } else {
+                            alert('Xóa thất bại!');
+                        }
+                    }
+                }
+                xhttp.open('POST', 'controller.php?', true);
+                xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhttp.send(`action=deleteBill&id=${id}`);
+            }
+        }
+        window.onload = () => {
+            getBill();
         }
         document.getElementById("ques-3").classList.add("active");
     </script>

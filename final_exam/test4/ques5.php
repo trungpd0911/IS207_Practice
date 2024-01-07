@@ -38,20 +38,46 @@
         <div class="card border-1 shadow p-3" style="width: 600px; font-size: 16px;">
             <input type="hidden" name="action" value="addDestination">
             <div class="mt-3 d-flex align-items-center justify-content-center flex-row">
-                <h3>Số điểm du lịch</h3>
-            </div>
-            <div class="mt-3 d-flex align-items-center justify-content-center flex-row">
-                <div style="min-width: 200px; padding: 0 10px 0 0;  ">Số điểm du lịch đã đi qua : </div>
-                <input type="text" class="form-control" name="destinationCount" placeholder="Nhập số điểm du lịch" onkeypress="getDestinationByCount(event)">
+                <h3>Danh sách 10 mặt hàng bán chạy nhất</h3>
             </div>
             <div class="mt-3 d-flex align-items-center justify-content-center flex-row">
                 <table>
-
                 </table>
             </div>
         </div>
     </div>
     <script>
+        const getTopSellingItem = () => {
+            let table = document.querySelector('table');
+            table.innerHTML = '';
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = () => {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    table.innerHTML += `
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên mặt hàng</th>
+                            <th>Số lượng đã bán</th>
+                        </tr>
+                    </thead>
+                    <tbody>`;
+                    let data = JSON.parse(xhttp.responseText);
+                    data.forEach((item, index) => {
+                        table.innerHTML += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${item.tenhh}</td>
+                            <td>${item.soluong} cái</td>
+                        </tr>`;
+                    });
+                    table.innerHTML += `</tbody>`;
+                }
+            }
+            xhttp.open("GET", "controller.php?action=getTopSellingItem", true);
+            xhttp.send();
+        }
+        getTopSellingItem();
         document.getElementById("ques-5").classList.add("active");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
